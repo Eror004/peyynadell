@@ -1,619 +1,133 @@
-<html>
-<meta charset='UTF-8' />
-<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5'
-  name='viewport' />
-<meta content='IE=edge' http-equiv='X-UA-Compatible' />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-
-<link href="/style.css" rel="stylesheet" type="text/css" />
-
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <title>For Pacarku</title>
-  <!-- 
-  Made with love by Rayys!
-     Blog: https://PalingIT.com
-     Instagram: @rayyarrr
-     TikTok: @rayy4r
-     Email: rayyar0703@gmail.com
-  Thanks to all <3
--->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Pernikahan Ahmad Perdiansyah & Adellia Riani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik+Mono+One&family=Staatliches&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<!-- Edit Wallpaper 
-di background-image URL -->
-<style>
-  :root {
-    --warna-bg: #61481C;
-    --warna-teks: #fff;
-    --warna-bingkai: #fff;
-    --bingkai: 8px;
-    --bingkai-kiri: 2px solid var(--warna-bingkai);
-    --bingkai-kanan: 2px solid var(--warna-bingkai);
-    --gaya-font: 'Ubuntu', sans-serif;
-    --gaya-font2: 'Work Sans', sans-serif;
-    --gaya-font3: 'Dancing Script', sans-serif;
-  }
 
-  @keyframes fanim {
-    0% {
-      background-position: 0% 0%;
-    }
-
-    25% {
-      background-position: 100% 100%;
-    }
-
-    50% {
-      background-position: 0% 100%;
-    }
-
-    75% {
-      background-position: 50% 50%;
-    }
-
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-
-  body {
-    background-color: #CA955C;
-    font-family: var(--gaya-font);
-    padding: 20px 25px;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  body {
-    background: linear-gradient(-45deg, #b69878, #CA955C, #b36e25, #814b12);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  body::before {
-    content: "\00A9  Rayys | PalingIT";
-    color: white;
-    opacity: 0;
-    font-size: 11px;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 2
-  }
-
-  #bodyblur {
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .3);
-    transition: all 1s ease;
-  }
-
-  #wallpaper {
-    width: 100%;
-    height: 100%;
-    transform: scale(2);
-    transition: all 1.3s ease;
-  }
-
-  #beneranblur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .3);
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
-    transition: all 3s ease;
-  }
-
-  @keyframes jj {
-    0% {
-      transform: scale(1.1);
-    }
-
-    50% {
-      transform: scale(1.2);
-    }
-
-    100% {
-      transform: scale(1.1);
-    }
-  }
-
-  @keyframes rts {
-    from {
-      transform: scale(.1);
-    }
-
-    to {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes rto {
-    from {
-      transform: scale(1);
-    }
-
-    to {
-      transform: scale(1.1);
-    }
-  }
-
-  @keyframes aniopa {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(.75);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes rtf {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rt {
-    from {
-      transform: scale(.9);
-      /* transform: rotate(-5deg); */
-    }
-
-    to {
-      transform: scale(1);
-      /* transform: rotate(5deg); */
-    }
-  }
-
-  @keyframes kont {
-    0% {
-      left: -1px;
-      top: -3px;
-    }
-
-    50% {
-      left: 1px;
-      top: 3px;
-    }
-
-    100% {
-      left: -1px;
-      top: -3px;
-    }
-  }
-
-  blockquote {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    margin-top: 100px;
-    background: var(--warna-bg);
-    border-radius: 8px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 7px 29px 0px;
-    transform: scale(.1);
-    transition: Alloh 1s ease;
-    margin-top: 120px;
-    margin-left: 0;
-    margin-right: 0;
-    color: var(--warna-teks);
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);
-  }
-
-  blockquote {
-    width: 400px;
-    text-align: center;
-    line-height: 1.3em;
-    padding: 10px 20px;
-  }
-
-  blockquote::before {
-    content: "";
-    position: absolute;
-    border: 1px solid #fff;
-    border-radius: 8px;
-    top: -8px;
-    bottom: -8px;
-    left: -8px;
-    right: -8px;
-  }
-
-  blockquote p {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.4em;
-    transition: all .5s ease;
-  }
-
-  blockquote #kalimat2 {
-    font-size: 17px;
-    font-weight: 400;
-  }
-
-  blockquote #kalimatbawah,
-  blockquote #kalimatnama {
-    position: absolute;
-    opacity: 0;
-    transform: scale(.3);
-    font-family: var(--gaya-font3);
-    font-size: 22px;
-    font-weight: 700;
-  }
-
-  #Tombol {
-    position: relative;
-    opacity: 0;
-    margin: 0;
-    display: flex;
-    align-items: left;
-    list-style: none;
-    transform: scale(.1);
-    transition: all .5s ease;
-  }
-
-  #Tombol a {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
-    margin: 12px 0 12px 0;
-    transition: all .2s ease;
-    padding: 10px;
-    outline: 0;
-    border-right: var(--bingkai-kanan);
-    border-left: var(--bingkai-kiri);
-    border-radius: 4px;
-    line-height: 15px;
-    background: var(--warna-bg);
-    color: var(--warna-teks);
-    font-size: 14px;
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 7px 29px 0px;
-    z-index: 1
-  }
-
-  #Content {
-    animation-name: none;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    position: relative;
-    opacity: 0;
-    margin-top: 50px;
-    width: 100%;
-    height: 180px;
-    transition: all .7s ease;
-  }
-
-  #Content>* {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 1px;
-  }
-
-  .kumpulanstiker>img {
-    display: none;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 7px 29px 0px;
-    background: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    width: 90px;
-    height: 90px;
-    margin: 20px 0;
-  }
-
-  #stiker {
-    opacity: .1;
-    transition: all 1.2s ease;
-    transform: scale(.1);
-  }
-
-  #halo {
-    font-size: 18px !important;
-    position: relative;
-    margin: 15px 0 30px 0
-  }
-
-  #fotolove img {
-    transition: all .5s ease;
-    width: 75px;
-    height: 75px;
-    padding: 0;
-    background: none
-  }
-
-  #suratin img {
-    display: inline-flex;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 10%;
-    padding: 10px;
-    width: 130px;
-    height: 130px;
-    animation: rto .7s infinite alternate;
-    transition: all .3s ease;
-  }
-
-  #ket,
-  #halo {
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);
-    font-size: 17px;
-    font-weight: 700;
-    color: white
-  }
-
-  #ket {
-    margin-top: 15px !important;
-    font-weight: 400;
-  }
-
-  #kolombaru {
-    position: absolute;
-    opacity: 0;
-    display: flex;
-    transform: scale(.1);
-    transition: all 1s ease;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-  }
-
-  #kolombaru>li {
-    margin: 10px;
-    padding: 10px;
-    list-style-type: none;
-  }
-
-  #kolombaru li img {
-    display: flex;
-    width: 40px;
-    height: 40px
-  }
-
-  #kolombaru li img:hover {
-    transform: scale(1.15);
-    transition: all .3s ease;
-  }
-
-  .swal2-modal>* {
-    font-family: var(--gaya-font2);
-    font-size: 17px;
-  }
-
-  .swal2-title {
-    line-height: 1.3em;
-    font-size: 18px;
-    text-align: center;
-    padding: 15px 20px 0 20px;
-  }
-
-  .swal2-container.swal2-backdrop-show {
-    background: rgba(0, 0, 0, .5);
-  }
-
-  .swal2-timer-progress-bar-container>* {
-    opacity: .7;
-    background: #007BFF;
-    margin: 0 2px
-  }
-
-  .swal2-modal {
-    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
-    max-width: 320px;
-    background: rgba(240, 240, 240, 1);
-    border-radius: 8px;
-    top: -80px;
-  }
-
-  .fa-heart {
-    opacity: .2;
-    color: white;
-    font-size: 27px;
-    position: absolute;
-    animation: heartMove linear 1;
-    top: -10vh;
-    z-index: -1;
-  }
-
-  @keyframes heartMove {
-    0% {
-      transform: translateY(-10vh);
-    }
-
-    100% {
-      transform: translateY(100vh);
-    }
-  }
-
-  .sembunyi,
-  #kado2,
-  #kado3 {
-    display: none !important
-  }
-</style>
-
-<body>
-
-  <!-- Ganti Audio di sini -->
-  <audio src="https://audio.jukehost.co.uk/mReL3WrJmx34CKfCxlzTEcBJ6qiaYkOl" id="linkmp3" class="sembunyi"></audio>
-
-  <div id="bodyblur"></div>
-  </div>
-
-  <div id='Content'>
-
-    <div id="suratin" onClick="memulai();">
-      <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png" />
+<body class="text-slate-100 noise-overlay">
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-pink-600/30 blur-3xl mix-blend-screen animate-pulse-glow"></div>
+      <div class="absolute top-40 -right-20 h-64 w-64 rounded-full bg-lime-400/20 blur-3xl mix-blend-screen"></div>
+      <div class="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-sky-400/20 blur-3xl mix-blend-screen"></div>
     </div>
-    <p id="ket">Hi Putri Buka Yaaaaaaa<3< /p>
 
-        <div class="kumpulanstiker">
-          <!-- Stiker untuk Akhiran -->
-          <img src="https://feeldreams.github.io/pusn.gif" id="stiker" />
-          <img src="https://feeldreams.github.io/bunga.gif" id="stiker2" />
-        </div>
-        <p id="halo">Haloooo</p>
-
-        <div>
-          <blockquote id='bq'>
-
-            <!-- Konten Pembukaan -->
-            <p id="kalimat"> FOR </p>
-            <p id="kalimatnama">Adellia Riani</p>
-            <p id="kalimat2">For Ur Self</p>
-
-            <p id="kalimat3" class="sembunyi"> "gua gatau sii, apa yang lu rasain , apa yang lu pikirin , but gua mau
-              kasi tau sama lu
-              jangan terlalu berlarut yaaaa , inget diri lu , lu yang punya diri lu sendiri , masih banyak banget hal
-              yang lebi penting buat lu pikirin , Masi banyak hal yg harus lu kejar , jangan cuma karna satu hal ngebuat
-              lu jadi sedi terus , sedi bole , tapi ada porsi nya yaaa , jangan terus²an , stop mikir hal yang Uda lewat
-              , lu harus bisa liat kedepan , upgrade diri lu , walopun susa tapi gua yakin lu pasti bisa buat lewatin
-              semuanya , okeii?? ."
-            </p>
-            <p id="kalimat4" class="sembunyi">Gatau si ini gua ngasal aja wkwkwk</p>
-
-            <p id="kalimat5" class="sembunyi">Uda ah </p>
-
-            <p id="kalimatbawah">Papaiiiiiii , Love ur self ya putt ❤️</p>
-
-          </blockquote>
-        </div>
-
-        <!-- Tombol Multifungsi -->
-        <div id="Tombol">
-          <a onClick="multifungsi()">
-            <b id="tmbl">Pencet ini</b>
+    <header class="sticky top-0 z-30 border-b border-slate-800/70 bg-black/40 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-5xl items-center justify-between px-5 py-3 md:px-6">
+        <div class="flex items-center gap-2">
+          <a href="index.html" class="h-8 w-8 rounded-full border border-pink-500/70 bg-gradient-to-br from-pink-500 via-yellow-400 to-lime-400 shadow-[0_0_18px_rgba(248,113,113,0.9)] animate-pulse-glow block"></a>
+          <a href="index.html" class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 hover:text-pink-400 transition">
+            <span class="text-pink-400">Ahmad</span> × <span class="text-lime-400">Adellia</span>
           </a>
         </div>
+        <div class="hidden items-center gap-5 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-slate-300 md:flex">
+          <a href="index.html" class="nav-link hover:text-pink-400 transition">Home</a>
+          <a href="acara.html" class="nav-link hover:text-pink-400 transition">Acara</a>
+          <a href="cerita.html" class="nav-link hover:text-pink-400 transition">Cerita</a>
+          <a href="galeri.html" class="nav-link hover:text-pink-400 transition">Galeri</a>
+          <a href="ucapan.html" class="nav-link hover:text-pink-400 transition">Ucapan</a>
+          <a href="rsvp.html" class="btn-outline px-4 py-1.5 hover:border-pink-400 hover:text-pink-300">RSVP</a>
+        </div>
+      </nav>
+    </header>
 
-        <!-- Pesan yang dikirim ke WhatsApp -->
-        <span id="pesanWA" class="sembunyi">Awww Love You To too ❤️❤️❤️</span>
+    <main class="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-20 px-5 py-10 md:px-6 md:py-14 lg:gap-24 lg:py-16 justify-center">
+      <section id="home" class="grid gap-10 hero-grid items-center">
+        <div class="space-y-6 md:space-y-8 animate-float-up">
+          <p class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-black/60 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-slate-300">
+            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-lime-400 shadow-[0_0_10px_rgba(190,242,100,1)] animate-pulse"></span>
+            The Wedding Of
+          </p>
 
+          <h1 class="punk-title text-3xl leading-relaxed text-slate-50 sm:text-4xl md:text-[2.7rem]">
+            <span data-text="AHMAD & ADELLIA" class="block">AHMAD & ADELLIA</span>
+          </h1>
+
+          <p class="max-w-xl text-sm text-slate-200/90 md:text-base">
+            Dua jiwa yang tumbuh dengan nada-nada berbeda, kini berpadu dalam satu irama. Kamu diundang untuk menjadi saksi perjalanan baru Ahmad Perdiansyah &amp; Adellia Riani dalam pernikahan bertema <span class="font-semibold text-pink-400">punk</span> yang tetap <span class="font-semibold text-lime-400">elegan</span>.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.18em] text-slate-300">
+            <div class="flex items-center gap-2 animate-slide-in-left">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-600/80 bg-black/80 text-[0.7rem]">🗓</span>
+              <span>Sabtu, 21 Juni 2026</span>
+            </div>
+            <span class="hidden h-[1px] w-6 bg-slate-600/70 md:inline-block"></span>
+            <div class="flex items-center gap-2 animate-slide-in-right">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-600/80 bg-black/80 text-[0.7rem]">📍</span>
+              <span>Kota Cinta, Indonesia</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2 md:pt-3">
+            <a href="rsvp.html" class="btn-punk-primary px-6 py-2 text-[0.7rem] md:text-xs">
+              <span>Konfirmasi Kehadiran</span>
+            </a>
+            <a href="acara.html" class="btn-outline px-5 py-1.5 text-[0.7rem] text-slate-200/90 hover:border-pink-400 hover:text-pink-300 transition">
+              Detail Acara
+            </a>
+            <a href="game.html" class="btn-outline px-5 py-1.5 text-[0.7rem] text-slate-200/90 hover:border-lime-400 hover:text-lime-300 transition">
+              🎮 Mini Game
+            </a>
+          </div>
+        </div>
+
+        <div class="punk-border tilt-3d relative mx-auto max-w-sm rounded-3xl p-[1px] animate-float-up stagger-1">
+          <div class="relative flex h-full flex-col justify-between rounded-3xl px-5 py-6 md:px-7 md:py-7">
+            <div class="flex items-center justify-between text-[0.65rem] uppercase tracking-[0.2em] text-slate-400">
+              <span>Wedding Pass</span>
+              <span class="text-pink-400">#PunkLove</span>
+            </div>
+
+            <div class="mt-5 space-y-3">
+              <p class="text-xs uppercase tracking-[0.25em] text-slate-300">The Couple</p>
+              <div class="text-2xl font-semibold text-slate-50">
+                <span class="neon-underline">Ahmad</span>
+                <span class="mx-2 text-pink-400">×</span>
+                <span class="neon-underline">Adellia</span>
+              </div>
+              <p class="text-xs text-slate-300/90">
+                "Dalam kebisingan dunia, kita memilih saling menemukan dan tidak lagi melepaskan."
+              </p>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-4 text-xs text-slate-200/90">
+              <div>
+                <p class="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">Tanggal</p>
+                <p class="font-medium">Sabtu, 21 Juni 2026</p>
+                <p class="text-[0.7rem] text-slate-300">10.00 - selesai</p>
+              </div>
+              <div>
+                <p class="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">Lokasi</p>
+                <p class="font-medium">Venue Pesta Punk Elegan</p>
+                <p class="text-[0.7rem] text-slate-300">Kota Cinta, Indonesia</p>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between border-t border-dashed border-slate-700/80 pt-4 text-[0.65rem] uppercase tracking-[0.16em] text-slate-400">
+              <span>Admit One</span>
+              <span class="rounded-full border border-slate-600/90 px-3 py-1 text-[0.6rem] text-slate-200/80">Dresscode: <span class="text-yellow-300">Punk Formal</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-10 border-t border-slate-800/80 bg-black/50 py-8 text-center text-[0.65rem] text-slate-500">
+      <div class="space-y-2 animate-float-up">
+        <p>Dibuat khusus untuk pernikahan <span class="text-slate-200 gradient-text">Ahmad Perdiansyah &amp; Adellia Riani</span></p>
+        <p>Tema: <span class="text-pink-400">Punk Elegan</span> • Dengan cinta dan kebahagiaan 💫</p>
+        <p class="text-[0.6rem] mt-3 text-slate-600">© 2026 Ahmad & Adellia Wedding • All Rights Reserved</p>
+      </div>
+    </footer>
   </div>
-
-  <!-- Jangan Edit Bagian Ini -->
-  <script>
-    ftom = 0; aksift = 0; ftganti = 0; flag = 1; flagg = 1; fungsi = 0; fungsiAwal = 0; fungsitimer = 0; vketikhalo = halo.innerHTML;
-    halo.innerHTML = ""; var ahalo = 0, vketikhalo; pesanwhatsapp = pesanWA.innerHTML;
-    Content.style = "opacity:1;margin-top:16vh;";
-
-    function memulai() {if (fungsiAwal == 0) {audio.play(); fungsiAwal = 1; suratin.style = "transition:all .8s ease;transform:scale(10);opacity:0"; ket.style = "display:none"; setTimeout(mulaikonten, 700)} }
-
-    async function mulaikonten() {
-      suratin.style = "display:none"; ket.style = "display:none";
-      Content.style = "opacity:1;margin-top:0";
-      bodyblur.style = "opacity:.7";
-      stiker.style = "display:inline-flex;";
-      setTimeout(ftmuncul, 200);
-      setTimeout(kethalo, 500);
-    }
-
-    function kethalo() {if (ahalo < vketikhalo.length) {halo.innerHTML += vketikhalo.charAt(ahalo); ahalo++; setTimeout(kethalo, 60);} if (ahalo == vketikhalo.length) {setTimeout(bqmuncul, 200);} }
-    function bqmuncul() {bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);margin-top:0"; setTimeout(mulaiketik1, 300); fungsi = 1;}
-
-    skal1 = 0; kal1 = kalimat.innerHTML; kalimat.innerHTML = ""; aa = 0, kal1;
-    function mulaiketik1() {
-      if (skal1 >= 1) {kalimat.style = "font-size:17px;font-weight:400;transition:all 0s ease;"}
-      if (aa < kal1.length) {
-        kalimat.innerHTML += kal1.charAt(aa); aa++;
-        if (skal1 == 0) {setTimeout(mulaiketik1, 150);}
-        if (skal1 == 1) {setTimeout(mulaiketik1, 70);}
-        if (skal1 == 2) {setTimeout(mulaiketik1, 200);}
-      }
-      if (aa == kal1.length) {if (skal1 == 0) {munculnama();} if (skal1 == 1) {mulaiketik2();} if (skal1 == 2) {setTimeout(munculbwh, 500); skal1 = 5} }
-    }
-    kal2 = kalimat2.innerHTML; kalimat2.innerHTML = ""; aaa = 0, kal2;
-    function mulaiketik2() {
-      if (aaa < kal2.length) {
-        kalimat2.innerHTML += kal2.charAt(aaa); aaa++;
-        if (skal1 == 0) {setTimeout(mulaiketik2, 200);}
-        if (skal1 == 1) {setTimeout(mulaiketik2, 120);}
-      }
-      if (aaa == kal2.length) {if (skal1 == 1) {ftom = 2; setTimeout(kalimatAkh, 1500)} else {ftom = 1; setTimeout(tombol, 1500);} }
-    }
-    sudahlove = 0;
-
-    function kalimatAkh() {
-      kalimat.innerHTML = ""; kalimat2.innerHTML = "";
-      kal1 = kalimat5.innerHTML; aa = 0, kal1;
-      skal1 = 2; setTimeout(mulaiketik1, 200);
-    }
-
-    defkalimatbawah = kalimatbawah.innerHTML;
-    function munculbwh() {kalimatbawah.innerHTML = defkalimatbawah; otomatis(); if (sudahlove == 0) {setInterval(createHeart, 300); sudahlove = 1} }
-    function munculnama() {kalimatnama.style = "position:relative;opacity:0;transform:scale(.3);"; setTimeout(nanim, 200); setTimeout(mulaiketik2, 1500); ftganti = 1; setTimeout(fthilang, 1500); setTimeout(ftmuncul, 1800);}
-    function nanim() {kalimatnama.style = "position:relative;opacity:1;transform:scale(1);";}
-    function munculbwh3() {kalimatbawah.innerHTML = kalimatbawah3.innerHTML; setTimeout(munculbwh, 2000); otomatis();}
-
-    function ftaksi() {if (aksift == 1) {aksift = 0;} }
-    function ftmuncul() {
-      if (ftganti == 0) {stiker.style = "display:inline-flex;opacity:1;transform:scale(1)";}
-      if (ftganti == 1) {stiker.src = stiker2.src; stiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
-    }
-    function fthilang() {stiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";}
-
-    function tombol() {Tombol.style = "opacity:1;transform: scale(1);";}
-    function multifungsi() {
-      if (ftom == 1) {
-        kalimat.innerHTML = ""; kal1 = kalimat3.innerHTML; kalimat3.innerHTML = ""; aa = 0, kal1;
-        kalimat2.innerHTML = ""; kal2 = kalimat4.innerHTML; kalimat4.innerHTML = ""; aaa = 0, kal2;
-        skal1 = 1; ftom = 0; mulaiketik1(); kalimatnama.style = "transition:none";
-        Tombol.style = "opacity:0;transform: scale(0);transition:none";
-      }
-    }
-    async function menuju() {window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
-
-    const body = document.querySelector("body"); const swalst = Swal.mixin({timer: 2300, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90, }); const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100, });
-    audio = new Audio('' + linkmp3.src);
-
-    function otomatis() {kalimatbawah.style = "position:relative;opacity:0;transform:scale(.3);"; setTimeout(anim, 300);}
-    function anim() {kalimatbawah.style = "position:relative;opacity:1;transform:scale(1);";}
-    function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90) + "vw"; heart.style.animationDuration = (Math.random() * 3) + 2 + "s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()} }, 100);
-  </script>
-  <!-- Sampai Sini -->
+  <script src="main.js"></script>
 </body>
-
 </html>
