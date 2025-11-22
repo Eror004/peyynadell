@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Pernikahan Ahmad Perdiansyah & Adellia Riani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik+Mono+One&family=Staatliches&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-slate-100 noise-overlay">
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-pink-600/30 blur-3xl mix-blend-screen animate-pulse-glow"></div>
+      <div class="absolute top-40 -right-20 h-64 w-64 rounded-full bg-lime-400/20 blur-3xl mix-blend-screen"></div>
+      <div class="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-sky-400/20 blur-3xl mix-blend-screen"></div>
+    </div>
+
+    <header class="sticky top-0 z-30 border-b border-slate-800/70 bg-black/40 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-5xl items-center justify-between px-5 py-3 md:px-6">
+        <div class="flex items-center gap-2">
+          <a href="index.html" class="h-8 w-8 rounded-full border border-pink-500/70 bg-gradient-to-br from-pink-500 via-yellow-400 to-lime-400 shadow-[0_0_18px_rgba(248,113,113,0.9)] animate-pulse-glow block"></a>
+          <a href="index.html" class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 hover:text-pink-400 transition">
+            <span class="text-pink-400">Ahmad</span> × <span class="text-lime-400">Adellia</span>
+          </a>
+        </div>
+        <div class="hidden items-center gap-5 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-slate-300 md:flex">
+          <a href="index.html" class="nav-link hover:text-pink-400 transition">Home</a>
+          <a href="acara.html" class="nav-link hover:text-pink-400 transition">Acara</a>
+          <a href="cerita.html" class="nav-link hover:text-pink-400 transition">Cerita</a>
+          <a href="galeri.html" class="nav-link hover:text-pink-400 transition">Galeri</a>
+          <a href="ucapan.html" class="nav-link hover:text-pink-400 transition">Ucapan</a>
+          <a href="rsvp.html" class="btn-outline px-4 py-1.5 hover:border-pink-400 hover:text-pink-300">RSVP</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-20 px-5 py-10 md:px-6 md:py-14 lg:gap-24 lg:py-16 justify-center">
+      <section id="home" class="grid gap-10 hero-grid items-center">
+        <div class="space-y-6 md:space-y-8 animate-float-up">
+          <p class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-black/60 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-slate-300">
+            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-lime-400 shadow-[0_0_10px_rgba(190,242,100,1)] animate-pulse"></span>
+            The Wedding Of
+          </p>
+
+          <h1 class="punk-title text-3xl leading-relaxed text-slate-50 sm:text-4xl md:text-[2.7rem]">
+            <span data-text="AHMAD & ADELLIA" class="block">AHMAD & ADELLIA</span>
+          </h1>
+
+          <p class="max-w-xl text-sm text-slate-200/90 md:text-base">
+            Dua jiwa yang tumbuh dengan nada-nada berbeda, kini berpadu dalam satu irama. Kamu diundang untuk menjadi saksi perjalanan baru Ahmad Perdiansyah &amp; Adellia Riani dalam pernikahan bertema <span class="font-semibold text-pink-400">punk</span> yang tetap <span class="font-semibold text-lime-400">elegan</span>.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.18em] text-slate-300">
+            <div class="flex items-center gap-2 animate-slide-in-left">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-600/80 bg-black/80 text-[0.7rem]">🗓</span>
+              <span>Sabtu, 21 Juni 2026</span>
+            </div>
+            <span class="hidden h-[1px] w-6 bg-slate-600/70 md:inline-block"></span>
+            <div class="flex items-center gap-2 animate-slide-in-right">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-600/80 bg-black/80 text-[0.7rem]">📍</span>
+              <span>Kota Cinta, Indonesia</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2 md:pt-3">
+            <a href="rsvp.html" class="btn-punk-primary px-6 py-2 text-[0.7rem] md:text-xs">
+              <span>Konfirmasi Kehadiran</span>
+            </a>
+            <a href="acara.html" class="btn-outline px-5 py-1.5 text-[0.7rem] text-slate-200/90 hover:border-pink-400 hover:text-pink-300 transition">
+              Detail Acara
+            </a>
+            <a href="game.html" class="btn-outline px-5 py-1.5 text-[0.7rem] text-slate-200/90 hover:border-lime-400 hover:text-lime-300 transition">
+              🎮 Mini Game
+            </a>
+          </div>
+        </div>
+
+        <div class="punk-border tilt-3d relative mx-auto max-w-sm rounded-3xl p-[1px] animate-float-up stagger-1">
+          <div class="relative flex h-full flex-col justify-between rounded-3xl px-5 py-6 md:px-7 md:py-7">
+            <div class="flex items-center justify-between text-[0.65rem] uppercase tracking-[0.2em] text-slate-400">
+              <span>Wedding Pass</span>
+              <span class="text-pink-400">#PunkLove</span>
+            </div>
+
+            <div class="mt-5 space-y-3">
+              <p class="text-xs uppercase tracking-[0.25em] text-slate-300">The Couple</p>
+              <div class="text-2xl font-semibold text-slate-50">
+                <span class="neon-underline">Ahmad</span>
+                <span class="mx-2 text-pink-400">×</span>
+                <span class="neon-underline">Adellia</span>
+              </div>
+              <p class="text-xs text-slate-300/90">
+                "Dalam kebisingan dunia, kita memilih saling menemukan dan tidak lagi melepaskan."
+              </p>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-4 text-xs text-slate-200/90">
+              <div>
+                <p class="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">Tanggal</p>
+                <p class="font-medium">Sabtu, 21 Juni 2026</p>
+                <p class="text-[0.7rem] text-slate-300">10.00 - selesai</p>
+              </div>
+              <div>
+                <p class="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">Lokasi</p>
+                <p class="font-medium">Venue Pesta Punk Elegan</p>
+                <p class="text-[0.7rem] text-slate-300">Kota Cinta, Indonesia</p>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between border-t border-dashed border-slate-700/80 pt-4 text-[0.65rem] uppercase tracking-[0.16em] text-slate-400">
+              <span>Admit One</span>
+              <span class="rounded-full border border-slate-600/90 px-3 py-1 text-[0.6rem] text-slate-200/80">Dresscode: <span class="text-yellow-300">Punk Formal</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-10 border-t border-slate-800/80 bg-black/50 py-8 text-center text-[0.65rem] text-slate-500">
+      <div class="space-y-2 animate-float-up">
+        <p>Dibuat khusus untuk pernikahan <span class="text-slate-200 gradient-text">Ahmad Perdiansyah &amp; Adellia Riani</span></p>
+        <p>Tema: <span class="text-pink-400">Punk Elegan</span> • Dengan cinta dan kebahagiaan 💫</p>
+        <p class="text-[0.6rem] mt-3 text-slate-600">© 2026 Ahmad & Adellia Wedding • All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
